@@ -1,0 +1,84 @@
+{
+    "package.json": {
+        "description": "Project metadata and dependencies"
+    },
+    "index.html": {
+        "description": "Main entry point for the React application"
+    },
+    "src/index.js": {
+        "description": "Main application entry point",
+        "dependencies": {
+            "src/App.js": [
+                "App"
+            ]
+        }
+    },
+    "src/App.js": {
+        "description": "Main application component",
+        "dependencies": {
+            "src/components/NoteList.js": [
+                "NoteList"
+            ],
+            "src/components/NoteForm.js": [
+                "NoteForm"
+            ],
+            "src/context/NoteContext.js": [
+                "NoteContextProvider"
+            ]
+        },
+        "exposes": [
+            "App"
+        ]
+    },
+    "src/components/NoteList.js": {
+        "description": "Displays a list of notes",
+        "dependencies": {
+            "src/context/NoteContext.js": [
+                "useNotes"
+            ]
+        },
+        "exposes": [
+            "NoteList"
+        ]
+    },
+    "src/components/NoteForm.js": {
+        "description": "Form component to add and update notes",
+        "dependencies": {
+            "src/context/NoteContext.js": [
+                "useNotes",
+                "addNote",
+                "updateNote"
+            ]
+        },
+        "exposes": [
+            "NoteForm"
+        ]
+    },
+    "src/context/NoteContext.js": {
+        "description": "Defines the Context API for notes data",
+        "dependencies": {
+            "src/data/notes.js": [
+                "initialNotes"
+            ]
+        },
+        "exposes": [
+            "NoteContextProvider",
+            "useNotes",
+            "addNote",
+            "updateNote",
+            "deleteNote"
+        ]
+    },
+    "src/data/notes.js": {
+        "description": "Hard-coded notes data object",
+        "exposes": [
+            "initialNotes"
+        ]
+    },
+    "README.md": {
+        "description": "Application documentation and usage guide"
+    },
+    ".gitignore": {
+        "description": ".gitignore file for node-modules and other ignored files"
+    }
+}
