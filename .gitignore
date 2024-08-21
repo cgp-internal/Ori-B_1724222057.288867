@@ -1,0 +1,16 @@
+node_modules/
+package-lock.json
+src/context/NoteContext.js
+src/data/notes.js
+src/components/NoteList.js
+src/components/NoteForm.js
+src/App.js
+initialNotes
+NoteContextProvider
+useNotes
+addNote
+updateNote
+deleteNote
+NoteList
+NoteForm
+App
