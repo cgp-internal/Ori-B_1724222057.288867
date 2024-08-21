@@ -1,0 +1,26 @@
+{
+  "name": "notes-app",
+  "version": "1.0.0",
+  "description": "Project metadata and dependencies",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "^4.0.3"
+  },
+  "exports": {
+    "./App": "./src/App.js",
+    "./NoteList": "./src/components/NoteList.js",
+    "./NoteForm": "./src/components/NoteForm.js",
+    "./NoteContextProvider": "./src/context/NoteContext.js",
+    "./useNotes": "./src/context/NoteContext.js",
+    "./addNote": "./src/context/NoteContext.js",
+    "./updateNote": "./src/context/NoteContext.js",
+    "./deleteNote": "./src/context/NoteContext.js",
+    "./initialNotes": "./src/data/notes.js"
+  }
+}
